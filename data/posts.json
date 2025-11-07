@@ -1,0 +1,32 @@
+[
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "Cómo cuidar tus plantas en casa",
+    "body": "Aprende los mejores consejos para mantener tus plantas saludables durante todo el año."
+  },
+  {
+    "userId": 1,
+    "id": 2,
+    "title": "Recetas fáciles para el almuerzo",
+    "body": "Descubre platos deliciosos y rápidos de preparar, ideales para toda la familia."
+  },
+  {
+    "userId": 1,
+    "id": 3,
+    "title": "Ejercicios para mejorar tu postura",
+    "body": "Guía práctica con rutinas simples para aliviar dolores de espalda y fortalecer el cuerpo."
+  },
+  {
+    "userId": 1,
+    "id": 4,
+    "title": "Cómo organizar tu tiempo de estudio",
+    "body": "Aprende estrategias efectivas para planificar mejor tus tareas y mejorar tus resultados."
+  },
+  {
+    "userId": 1,
+    "id": 5,
+    "title": "Destinos turísticos en el Perú",
+    "body": "Desde Machu Picchu hasta la Amazonía, conoce los lugares más fascinantes del país."
+  }
+]
