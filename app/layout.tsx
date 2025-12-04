@@ -5,8 +5,8 @@ import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Blog Amazónico",
-  description: "Aprendiendo Next.js con TypeScript y TailwindCSS",
+  title: "TrompeteroCity",
+  description: "Explora la biodiversidad de la Amazonía peruana 🌿",
 };
 
 export default function RootLayout({
@@ -16,30 +16,40 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={`${inter.className} bg-gray-50 text-gray-900`}>
-        {/* 🔹 Barra de navegación */}
-        <nav className="bg-blue-700 text-white px-6 py-4">
-          <div className="max-w-6xl mx-auto flex justify-between items-center">
-            <Link href="/" className="text-xl font-bold">
-              🌿 TrompeteroCity
+      <body className={`${inter.className} bg-[#0F1F17] text-white`}>
+        {/* 🔹 Navbar */}
+        <nav className="bg-[#0F1F17] border-b border-green-900 text-white px-8 py-4">
+          <div className="max-w-7xl mx-auto flex justify-between items-center">
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-2">
+              <span className="text-2xl">🌿</span>
+              <span className="font-semibold text-lg">TrompeteroCity</span>
             </Link>
-            <div className="flex gap-6">
-              <Link href="/" className="hover:underline">
-                Publicaciones
+
+            {/* Menú */}
+            <div className="flex gap-6 text-sm">
+              <Link href="/animales" className="hover:text-green-400 font-medium">
+                Fauna
               </Link>
-              <Link href="/animales" className="hover:underline">
-                Fauna Amazónica
+              <Link href="/flora" className="hover:text-green-400">
+                Flora
+              </Link>
+              <Link href="/ecosistemas" className="hover:text-green-400">
+                Ecosystems
+              </Link>
+              <Link href="/about" className="hover:text-green-400">
+                About Us
               </Link>
             </div>
           </div>
         </nav>
 
-        {/* 🔹 Contenido dinámico */}
+        {/* Contenido dinámico */}
         <main className="min-h-screen">{children}</main>
 
-        {/* 🔹 Pie de página */}
-        <footer className="bg-blue-900 text-white text-center py-4 mt-8">
-          <p>© {new Date().getFullYear()} Amazonia Viva — Proyecto trompeterino 🌎</p>
+        {/* Footer */}
+        <footer className="text-center text-gray-400 text-sm py-6 border-t border-green-900">
+          © {new Date().getFullYear()} TrompeteroCity — Proyecto educativo 🌎
         </footer>
       </body>
     </html>

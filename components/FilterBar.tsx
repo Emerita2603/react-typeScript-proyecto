@@ -1,52 +1,52 @@
-"use client"; // 👈 importante para habilitar interactividad
+"use client";
 
 import { useState } from "react";
 
-interface FilterBarProps {
+interface Props {
   categorias: string[];
   onFilter: (texto: string, categoria: string) => void;
 }
 
-export default function FilterBar({ categorias, onFilter }: FilterBarProps) {
+export default function FilterBar({ categorias, onFilter }: Props) {
   const [texto, setTexto] = useState("");
   const [categoria, setCategoria] = useState("");
 
-  const handleFilter = () => {
-    onFilter(texto, categoria);
-  };
-
   return (
-    <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
-      {/* 🔍 Buscador */}
-      <input
-        type="text"
-        placeholder="Buscar animal..."
-        value={texto}
-        onChange={(e) => setTexto(e.target.value)}
-        className="border rounded-lg px-4 py-2 w-64 focus:outline-none focus:ring-2 focus:ring-green-600"
-      />
+    <div className="flex flex-col sm:flex-row gap-4 items-center mb-6">
+      
 
-      {/* 🐾 Selector de categoría */}
-      <select
-        value={categoria}
-        onChange={(e) => setCategoria(e.target.value)}
-        className="border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
-      >
-        <option value="">Todas las categorías</option>
+      <div className="flex flex-wrap gap-2">
+        <button
+          onClick={() => {
+            setCategoria("");
+            onFilter(texto, "");
+          }}
+          className={`px-4 py-2 rounded-full ${
+            categoria === ""
+              ? "bg-green-500 text-black font-semibold"
+              : "bg-[#0e2b1c] text-gray-300 border border-green-800"
+          }`}
+        >
+          Todos
+        </button>
+
         {categorias.map((cat) => (
-          <option key={cat} value={cat}>
+          <button
+            key={cat}
+            onClick={() => {
+              setCategoria(cat);
+              onFilter(texto, cat);
+            }}
+            className={`px-4 py-2 rounded-full ${
+              categoria === cat
+                ? "bg-green-500 text-black font-semibold"
+                : "bg-[#0e2b1c] text-gray-300 border border-green-800"
+            }`}
+          >
             {cat}
-          </option>
+          </button>
         ))}
-      </select>
-
-      {/* 🔘 Botón de filtro */}
-      <button
-        onClick={handleFilter}
-        className="bg-green-700 text-white px-5 py-2 rounded-lg hover:bg-green-800 transition"
-      >
-        Filtrar
-      </button>
+      </div>
     </div>
   );
 }

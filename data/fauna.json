@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "delfin-rosado",
     "nombre": "Delfín rosado",
     "nombre_cientifico": "Inia geoffrensis",
     "descripcion": "El delfín rosado es un mamífero acuático de agua dulce que habita los ríos del Amazonas. Es símbolo de la biodiversidad amazónica.",
@@ -9,7 +9,7 @@
     "habitat": "Ríos y lagunas de agua dulce del Amazonas peruano"
   },
   {
-    "id": 2,
+    "id": "mono-fraile",
     "nombre": "Mono fraile",
     "nombre_cientifico": "Saimiri sciureus.",
     "descripcion": "Es un primate diurno de pequeño tamaño con pelaje corto y denso de tonos verdosos-dorados y anaranjados, que se distingue por su máscara blanca alrededor de los ojos y su cola larga no prensil con la punta negra.",
@@ -17,7 +17,7 @@
     "categoria": "Ave"
   },
   {
-    "id": 3,
+    "id": "pinsha",
     "nombre": "Pinsha",
     "nombre_cientifico": "Ramphastidae",
     "descripcion": "Un tucán (especialmente en la Amazonía peruana), a una leyenda sobre el origen de esta ave, a unas estatuas antiguas en el videojuego Just Cause 4, o a un Centro Ecoturístico en Perú.",
